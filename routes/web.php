@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'DashboardController@index')->name('home');
+
+
+Route::get('/import/data/survey', 'ImportController@surveyData')->name('import_survey_data');
