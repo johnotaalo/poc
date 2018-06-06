@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('eid/outcomes', 'Api\SurveyController@getEIDOutcomes');
+Route::get('eid/positiveoutcomes', 'API\SurveyController@getPositiveOutcomesDetails');
+Route::get('eid/negativeoutcomes', 'API\SurveyController@getNegativeOutcomesDetails');
