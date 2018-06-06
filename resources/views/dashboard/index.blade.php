@@ -10,11 +10,11 @@
 		<div class="white-box">
 			<h3 class="box-title">EID OUTCOMES</h3>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8">
 					<div id="outcomes_pie"></div>
 				</div>
-				<div class="col-md-5">
-					<table class="table table-bordered" style="margin-top: 100px;">
+				<div class="col-md-4">
+					<table class="table table-bordered table-striped" style="margin-top: 100px;">
 						<tbody id="eid-outcomes-table"></tbody>
 					</table>
 				</div>
@@ -24,11 +24,11 @@
 		<div class="white-box">
 			<h3 class="box-title">EID: Positive Outcome Analysis</h3>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8">
 					<div id="positive-outcomes-graph"></div>
 				</div>
-				<div class="col-md-5">
-					<table class="table table-bordered" style="margin-top: 100px;">
+				<div class="col-md-4">
+					<table class="table table-bordered table-striped" style="margin-top: 100px;">
 						<tbody id="positive-outcomes-table"></tbody>
 					</table>
 				</div>
@@ -38,11 +38,11 @@
 		<div class="white-box">
 			<h3 class="box-title">EID: Negative Outcome Analysis</h3>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8">
 					<div id="negative-outcomes-graph"></div>
 				</div>
-				<div class="col-md-5">
-					<table class="table table-bordered" style="margin-top: 100px;">
+				<div class="col-md-4">
+					<table class="table table-bordered table-striped" style="margin-top: 100px;">
 						<tbody id="negative-outcomes-table"></tbody>
 					</table>
 				</div>
