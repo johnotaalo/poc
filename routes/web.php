@@ -14,4 +14,5 @@
 Route::get('/', 'DashboardController@index')->name('home');
 
 
-Route::get('/import/data/survey', 'ImportController@surveyData')->name('import_survey_data');
+Route::get('/import/data/eid', 'ImportController@eiddata')->name('import_eid_data');
+Route::get('/import/data/vl', 'ImportController@vldata')->name('import_vl_data');

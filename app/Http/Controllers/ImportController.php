@@ -9,14 +9,9 @@ use App\SurveyVLResponse;
 
 class ImportController extends Controller
 {
-    function surveyData(){
+    function eiddata(){
     	$eid_data = \Excel::selectSheetsByIndex(1)->load(\Storage::url('/app/data/surveydata.xlsx'))->get();
     	$eid_data_headers = $eid_data->getHeading();
-
-    	$vl_data = \Excel::selectSheetsByIndex(2)->load(\Storage::url('/app/data/surveydata.xlsx'))->get();
-    	$vl_data_headers = $vl_data->getHeading();
-
-    	// echo "<pre>";print_r($eid_data_headers);
 
     	foreach ($eid_data as $data) {
     		$eidResponse = [
@@ -58,8 +53,34 @@ class ImportController extends Controller
     		SurveyEIDResponse::create($eidResponse);
     	}
 
-    	foreach ($vl_data as $data) {
-    		# code...
+    	
+	}
+	
+	function vldata(){
+		$vl_data = \Excel::selectSheetsByIndex(2)->load(\Storage::url('/app/data/surveydata.xlsx'))->get();
+		$vl_data_headers = $vl_data->getHeading();
+
+		foreach ($vl_data as $data) {
+			$vlResponse = [
+				"county"								=> "Meru", 
+				"ccc"									=>	$data[$vl_data_headers[0]], 
+				"date_of_birth"							=>	$data[$vl_data_headers[1]], 
+				"gender"								=>	$data[$vl_data_headers[2]], 
+				"date_initiated"						=>	$data[$vl_data_headers[3]], 
+				"vl_justification"						=>	$data[$vl_data_headers[4]], 
+				"date_sample_collected"					=>	$data[$vl_data_headers[5]], 
+				"date_sample_received_at_lab"			=>	$data[$vl_data_headers[6]], 
+				"date_vl_test_done"						=>	$data[$vl_data_headers[7]], 
+				"date_result_released"					=>	$data[$vl_data_headers[8]],
+				"date_result_received_by_care_giver"	=>	$data[$vl_data_headers[9]], 
+				"suppression"							=>	$data[$vl_data_headers[10]], 
+				"repeat_vl"								=>	$data[$vl_data_headers[11]], 
+				"date_repeat_vl_collected"				=>	$data[$vl_data_headers[12]], 
+				"date_vl_result_received_by_care_giver"	=>	$data[$vl_data_headers[13]], 
+				"repeat_vl_result"						=>	$data[$vl_data_headers[14]]
+			];
+
+			SurveyVLResponse::create($vlResponse);
     	}
-    }
+	}
 }
