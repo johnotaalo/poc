@@ -53,12 +53,12 @@
             <footer class="footer text-center"> <?= @date('Y'); ?> &copy; Ministry of Health </footer>
         </div>
 	</div>
-	<script src="{{ asset('dashboard/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
-	<script src="{{ asset('dashboard/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
-	<script src="{{ asset('dashboard/js/jquery.slimscroll.js') }}"></script>
-	<script src="{{ asset('dashboard/js/waves.js') }}"></script>
-	<script src="{{ asset('dashboard/js/custom.min.js') }}"></script>
+	<script src="{{ asset('dashboard/plugins/bower_components/jquery/dist/jquery.min.js', $secure) }}"></script>
+	<script src="{{ asset('dashboard/bootstrap/dist/js/bootstrap.min.js', $secure) }}"></script>
+	<script src="{{ asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js', $secure) }}"></script>
+	<script src="{{ asset('dashboard/js/jquery.slimscroll.js', $secure) }}"></script>
+	<script src="{{ asset('dashboard/js/waves.js', $secure) }}"></script>
+	<script src="{{ asset('dashboard/js/custom.min.js', $secure) }}"></script>
 
     @yield('page_js')
 </body>
