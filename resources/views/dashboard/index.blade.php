@@ -121,9 +121,9 @@
 
 @section('page_js')
 <script type="text/javascript" src=""></script>
-<script type="text/javascript" src="{{ asset('js/highcharts/highcharts.js', $secure) }}"></script>
-<script type="text/javascript" src="{{ asset('js/highcharts/exporting.js', $secure) }}"></script>
-<script type="text/javascript" src="{{ asset('js/highcharts/export-data.js', $secure) }}"></script>
+<script type="text/javascript" src="{{ my_asset('js/highcharts/highcharts.js') }}"></script>
+<script type="text/javascript" src="{{ my_asset('js/highcharts/exporting.js') }}"></script>
+<script type="text/javascript" src="{{ my_asset('js/highcharts/export-data.js') }}"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		drawEIDOutcomesGraph();

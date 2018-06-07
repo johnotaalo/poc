@@ -119,9 +119,9 @@
 
 <?php $__env->startSection('page_js'); ?>
 <script type="text/javascript" src=""></script>
-<script type="text/javascript" src="<?php echo e(asset('js/highcharts/highcharts.js')); ?>"></script>
-<script type="text/javascript" src="<?php echo e(asset('js/highcharts/exporting.js')); ?>"></script>
-<script type="text/javascript" src="<?php echo e(asset('js/highcharts/export-data.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(my_asset('js/highcharts/highcharts.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(my_asset('js/highcharts/exporting.js')); ?>"></script>
+<script type="text/javascript" src="<?php echo e(my_asset('js/highcharts/export-data.js')); ?>"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		drawEIDOutcomesGraph();

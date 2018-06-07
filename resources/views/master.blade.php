@@ -12,15 +12,15 @@
     <?php
         $secure = (env('APP_ENV') == "local") ? false : true;
     ?>
-    <link href="{{ asset('dashboard/bootstrap/dist/css/bootstrap.min.css', $secure)}}" rel="stylesheet">
+    <link href="{{ my_asset('dashboard/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- This is Sidebar menu CSS -->
-    <link href="{{ asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css', $secure) }}" rel="stylesheet">
+    <link href="{{ my_asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
     <!-- This is a Animation CSS -->
-    <link href="{{ asset('dashboard/css/animate.css', $secure) }}" rel="stylesheet">
+    <link href="{{ my_asset('dashboard/css/animate.css') }}" rel="stylesheet">
     @yield('page_css')
     <!-- This is a Custom CSS -->
-    <link href="{{ asset('dashboard/css/style.css', $secure) }}" rel="stylesheet">
-    <link href="{{ asset('dashboard/css/colors/default.css', $secure) }}" id="theme" rel="stylesheet">
+    <link href="{{ my_asset('dashboard/css/style.css') }}" rel="stylesheet">
+    <link href="{{ my_asset('dashboard/css/colors/default.css') }}" id="theme" rel="stylesheet">
 	<title></title>
 
 	<style>
@@ -53,12 +53,12 @@
             <footer class="footer text-center"> <?= @date('Y'); ?> &copy; Ministry of Health </footer>
         </div>
 	</div>
-	<script src="{{ asset('dashboard/plugins/bower_components/jquery/dist/jquery.min.js', $secure) }}"></script>
-	<script src="{{ asset('dashboard/bootstrap/dist/js/bootstrap.min.js', $secure) }}"></script>
-	<script src="{{ asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js', $secure) }}"></script>
-	<script src="{{ asset('dashboard/js/jquery.slimscroll.js', $secure) }}"></script>
-	<script src="{{ asset('dashboard/js/waves.js', $secure) }}"></script>
-	<script src="{{ asset('dashboard/js/custom.min.js', $secure) }}"></script>
+	<script src="{{ my_asset('dashboard/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
+	<script src="{{ my_asset('dashboard/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script src="{{ my_asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js') }}"></script>
+	<script src="{{ my_asset('dashboard/js/jquery.slimscroll.js') }}"></script>
+	<script src="{{ my_asset('dashboard/js/waves.js') }}"></script>
+	<script src="{{ my_asset('dashboard/js/custom.min.js') }}"></script>
 
     @yield('page_js')
 </body>
