@@ -19,5 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('eid/outcomes', 'Api\SurveyController@getEIDOutcomes');
-Route::get('eid/positiveoutcomes', 'API\SurveyController@getPositiveOutcomesDetails');
-Route::get('eid/negativeoutcomes', 'API\SurveyController@getNegativeOutcomesDetails');
+Route::get('eid/positiveoutcomes', 'Api\SurveyController@getPositiveOutcomesDetails');
+Route::get('eid/negativeoutcomes', 'Api\SurveyController@getNegativeOutcomesDetails');
