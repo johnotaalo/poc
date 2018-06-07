@@ -1,5 +1,5 @@
 <?php
 
 function my_asset($path, $secure = null){
-    return asset(trim($path, '/'), $secure);
+    return asset(env('APP_URL') . '/' . trim($path, '/'), $secure);
 }

@@ -9,9 +9,9 @@
     <meta name="author" content="CHAI Kenya">
 	<link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
 	<!-- Bootstrap Core CSS -->
-    <link href="{{ my_asset('dashboard/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ my_asset('dashboard/bootstrap/dist/css/bootstrap.min.css', true)}}" rel="stylesheet">
     <!-- This is Sidebar menu CSS -->
-    <link href="{{ asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css', true) }}" rel="stylesheet">
     <!-- This is a Animation CSS -->
     <link href="{{ asset('dashboard/css/animate.css') }}" rel="stylesheet">
     @yield('page_css')
