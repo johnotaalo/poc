@@ -9,15 +9,18 @@
     <meta name="author" content="CHAI Kenya">
 	<link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
 	<!-- Bootstrap Core CSS -->
-    <link href="<?php echo e(my_asset('dashboard/bootstrap/dist/css/bootstrap.min.css')); ?>" rel="stylesheet">
+    <?php
+        $secure = (env('APP_ENV') == "local") ? false : true;
+    ?>
+    <link href="<?php echo e(asset('dashboard/bootstrap/dist/css/bootstrap.min.css', $secure)); ?>" rel="stylesheet">
     <!-- This is Sidebar menu CSS -->
-    <link href="<?php echo e(asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css', $secure)); ?>" rel="stylesheet">
     <!-- This is a Animation CSS -->
-    <link href="<?php echo e(asset('dashboard/css/animate.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('dashboard/css/animate.css', $secure)); ?>" rel="stylesheet">
     <?php echo $__env->yieldContent('page_css'); ?>
     <!-- This is a Custom CSS -->
-    <link href="<?php echo e(asset('dashboard/css/style.css')); ?>" rel="stylesheet">
-    <link href="<?php echo e(asset('dashboard/css/colors/default.css')); ?>" id="theme" rel="stylesheet">
+    <link href="<?php echo e(asset('dashboard/css/style.css', $secure)); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('dashboard/css/colors/default.css', $secure)); ?>" id="theme" rel="stylesheet">
 	<title></title>
 
 	<style>

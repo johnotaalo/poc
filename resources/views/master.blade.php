@@ -9,15 +9,18 @@
     <meta name="author" content="CHAI Kenya">
 	<link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
 	<!-- Bootstrap Core CSS -->
-    <link href="{{ my_asset('dashboard/bootstrap/dist/css/bootstrap.min.css', true)}}" rel="stylesheet">
+    <?php
+        $secure = (env('APP_ENV') == "local") ? false : true;
+    ?>
+    <link href="{{ asset('dashboard/bootstrap/dist/css/bootstrap.min.css', $secure)}}" rel="stylesheet">
     <!-- This is Sidebar menu CSS -->
-    <link href="{{ asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css', $secure) }}" rel="stylesheet">
     <!-- This is a Animation CSS -->
-    <link href="{{ asset('dashboard/css/animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('dashboard/css/animate.css', $secure) }}" rel="stylesheet">
     @yield('page_css')
     <!-- This is a Custom CSS -->
-    <link href="{{ asset('dashboard/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('dashboard/css/colors/default.css') }}" id="theme" rel="stylesheet">
+    <link href="{{ asset('dashboard/css/style.css', $secure) }}" rel="stylesheet">
+    <link href="{{ asset('dashboard/css/colors/default.css', $secure) }}" id="theme" rel="stylesheet">
 	<title></title>
 
 	<style>
