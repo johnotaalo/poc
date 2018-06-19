@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\SurveyEIDResponse;
+use App\SurveyVLResponse;
 use App\PositiveDateDifference;
 use App\NegativeDateDifference;
 class DashboardController extends Controller
@@ -13,6 +14,11 @@ class DashboardController extends Controller
     	$data['patients'] = SurveyEIDResponse::count();
     	$data['positive_tats'] = ($this->getPositivesTAT());
     	$data['negative_tats'] = ($this->getNegativeTAT());
+        $data['ppw_count'] = SurveyVLResponse::count();
+        $data['suppressed'] = SurveyVLResponse::where('suppression', 1)->count();
+        $data['not_suppressed'] = SurveyVLResponse::where('suppression', 2)->count();
+        $data['invalid_suppression'] = SurveyVLResponse::where('suppression', 3)->count();
+        $data['initiated_to_sample_collected'] = ($this->getVLTAT());
     	return view('dashboard.index')->with($data);
     }
 
@@ -42,5 +48,16 @@ class DashboardController extends Controller
     		"Collection to Received"								=>	$collected_to_received_median,
     		"Collection Test 1 to Collection Test 2"				=>	$first_to_second_median
     	];
+    }
+
+    function getVLTAT(){
+        $differences = SurveyVLResponse::all();
+        $differences_array = [];
+
+        foreach ($differences as $difference) {
+            $differences_array[]['initiated_to_sample_collected'] = $difference->getDateDifferenceInitiatedSampleCollected();
+        }
+
+        return collect($differences_array)->median('initiated_to_sample_collected');
     }
 }

@@ -114,6 +114,46 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="col-md-12 col-sm-6">
+				<div class="white-box">
+					<h3 class="box-title">VL Analysis</h3>
+					<table class="table table-bordered">
+						<tbody>
+							<tr>
+								<th>No. of PPW Accessing VL</th>
+								<td>{{ $ppw_count }}</td>
+							</tr>
+							<tr>
+								<th>Suppressed</th>
+								<td>{{ $suppressed }}</td>
+							</tr>
+							<tr>
+								<th>Not Suppressed</th>
+								<td>{{ $not_suppressed }}</td>
+							</tr>
+							<tr>
+								<th>Invalid Suppressions</th>
+								<td>{{ $invalid_suppression }}</td>
+							</tr>
+						</tbody>
+					</table>
+					<h4>Median TAT</h4>
+					<div class="list-group">
+						<a href="javascript:void(0)" class="list-group-item">
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<h2 class="list-group-item-heading">Initiated on Treatment to VL Sample collected</h2>
+									{{-- <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p> --}}
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6 ">
+									<h1 class="text-right text-muted m-t-20">{{ $initiated_to_sample_collected }} Days</h1>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
