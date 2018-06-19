@@ -119,20 +119,24 @@
 					<table class="table table-bordered">
 						<tbody>
 							<tr>
-								<th>No. of PPW Accessing VL</th>
-								<td><?php echo e($ppw_count); ?></td>
+								<th><h3>No. of PPW Accessing VL</h3></th>
+								<td><h3><?php echo e($ppw_count); ?></h3></td>
+								<th><h3>%</h3></th>
 							</tr>
 							<tr>
 								<th>Suppressed</th>
-								<td><?php echo e($suppressed); ?></td>
+								<td><?php echo e($suppressed); ?></h3>
+								<td><?php echo round($suppressed / $ppw_count * 100); ?> %</td>
 							</tr>
 							<tr>
 								<th>Not Suppressed</th>
 								<td><?php echo e($not_suppressed); ?></td>
+								<td><?php echo round($not_suppressed / $ppw_count * 100); ?> %</td>
 							</tr>
 							<tr>
 								<th>Invalid Suppressions</th>
 								<td><?php echo e($invalid_suppression); ?></td>
+								<td><?php echo round($invalid_suppression / $ppw_count * 100); ?> %</td>
 							</tr>
 						</tbody>
 					</table>

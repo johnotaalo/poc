@@ -121,20 +121,24 @@
 					<table class="table table-bordered">
 						<tbody>
 							<tr>
-								<th>No. of PPW Accessing VL</th>
-								<td>{{ $ppw_count }}</td>
+								<th><h3>No. of PPW Accessing VL</h3></th>
+								<td><h3>{{ $ppw_count }}</h3></td>
+								<th><h3>%</h3></th>
 							</tr>
 							<tr>
 								<th>Suppressed</th>
-								<td>{{ $suppressed }}</td>
+								<td>{{ $suppressed }}</h3>
+								<td><?php echo round($suppressed / $ppw_count * 100); ?> %</td>
 							</tr>
 							<tr>
 								<th>Not Suppressed</th>
 								<td>{{ $not_suppressed }}</td>
+								<td><?php echo round($not_suppressed / $ppw_count * 100); ?> %</td>
 							</tr>
 							<tr>
 								<th>Invalid Suppressions</th>
 								<td>{{ $invalid_suppression }}</td>
+								<td><?php echo round($invalid_suppression / $ppw_count * 100); ?> %</td>
 							</tr>
 						</tbody>
 					</table>
